@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="mine" />
+<Content type="html"><![CDATA[
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="theme-color" content="#2d3331" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>proxy test</title>
+    </head>
+
+    <body>
+        <div id="fetch"></div>
+        <script>
+            fetch('https://www-sites-opensocial.googleusercontent.com/gadgets/proxy/refresh=3600&container=enterprise/https://www.google.com/fbx?fbx=snake_arcade')
+              .then(obj => obj.text())
+              .then(dataw2 => {
+                  document.getElementById('fetch').innerHTML = dataw2;
+              });
+        </script>
+    </body>
+</html>
+
+]]></Content>
+</Module>
